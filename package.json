@@ -1,15 +1,16 @@
 {
   "name": "@mozeyinedu/react-lab",
-  "version": "0.7.5",
+  "version": "1.0.0",
   "description": "Contains 3 react components, these will grow in the future",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
   "files": [
     "lib/"
   ],
   "scripts": {
     "build": "rm -rf lib/ && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "publish_": "npm publish --access public",
+    "publish_": "npm run build && npm publish --access public",
     "push": "git add . && git commit -m 'updated' && git push origin master",
     "all": "npm run build && npm run push && npm run publish_"
   },
@@ -43,11 +44,14 @@
   },
   "devDependencies": {
     "@types/node": "^20.8.0",
-    "@types/react": "^18.2.28",
-    "react": "^18.2.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "react": "*"
+    "react": "*",
+    "react-dom": "*"
   }
 }
