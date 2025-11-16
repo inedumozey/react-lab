@@ -145,6 +145,9 @@ function OperationNote({ data, updateData }: ModalContentProps) {
   const handleSubmit = () => {
     console.log(note);
     // Add logic here to send data to a real API/store
+
+    // emtpy the data from localstorage after submission
+    updateData({ note: "" });
   };
 
   return (
