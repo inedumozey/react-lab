@@ -1,6 +1,6 @@
 {
   "name": "@mozeyinedu/react-lab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Contains 3 react components, these will grow in the future",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
